@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -181,3 +182,6 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_PASSWORD_MIN_LENGTH = 6
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
